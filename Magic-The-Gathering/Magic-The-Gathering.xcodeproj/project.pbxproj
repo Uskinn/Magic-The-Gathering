@@ -14,6 +14,8 @@
 		8AD1B4321E41415C0021EDE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD1B4301E41415C0021EDE2 /* LaunchScreen.storyboard */; };
 		8AD1B43F1E414B680021EDE2 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B43E1E414B680021EDE2 /* CardViewController.swift */; };
 		8AD1B4411E414CF60021EDE2 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4401E414CF60021EDE2 /* CardCollectionViewCell.swift */; };
+		8AD1B44B1E4257990021EDE2 /* TheGatheringApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B44A1E4257990021EDE2 /* TheGatheringApi.swift */; };
+		8AD1B44D1E4257D00021EDE2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B44C1E4257D00021EDE2 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8AD1B4331E41415C0021EDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AD1B43E1E414B680021EDE2 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		8AD1B4401E414CF60021EDE2 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		8AD1B44A1E4257990021EDE2 /* TheGatheringApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheGatheringApi.swift; sourceTree = "<group>"; };
+		8AD1B44C1E4257D00021EDE2 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				8AD1B4391E4142DA0021EDE2 /* Controller */,
+				8AD1B4491E42573A0021EDE2 /* Model */,
 				8AD1B4421E414CFA0021EDE2 /* Cell */,
 				8AD1B43A1E4142E70021EDE2 /* Storyboard */,
 				8AD1B43B1E4142FD0021EDE2 /* Helper */,
@@ -100,6 +105,15 @@
 				8AD1B4401E414CF60021EDE2 /* CardCollectionViewCell.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		8AD1B4491E42573A0021EDE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1B44A1E4257990021EDE2 /* TheGatheringApi.swift */,
+				8AD1B44C1E4257D00021EDE2 /* Card.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD1B4411E414CF60021EDE2 /* CardCollectionViewCell.swift in Sources */,
+				8AD1B44D1E4257D00021EDE2 /* Card.swift in Sources */,
 				8AD1B4251E41415C0021EDE2 /* AppDelegate.swift in Sources */,
 				8AD1B42D1E41415C0021EDE2 /* Magic_The_Gathering.xcdatamodeld in Sources */,
 				8AD1B43F1E414B680021EDE2 /* CardViewController.swift in Sources */,
+				8AD1B44B1E4257990021EDE2 /* TheGatheringApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
