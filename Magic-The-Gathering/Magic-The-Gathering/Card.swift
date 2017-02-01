@@ -12,7 +12,7 @@ class Card: NSObject {
     
     var cardName: String?
     var cardRarity: String?
-    var cardFlavor: String?
+    var cardText: String?
     var cardId: String?
     
     var imageUrl: String?

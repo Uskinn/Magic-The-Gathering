@@ -16,6 +16,8 @@
 		8AD1B4411E414CF60021EDE2 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4401E414CF60021EDE2 /* CardCollectionViewCell.swift */; };
 		8AD1B44B1E4257990021EDE2 /* TheGatheringApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B44A1E4257990021EDE2 /* TheGatheringApi.swift */; };
 		8AD1B44D1E4257D00021EDE2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B44C1E4257D00021EDE2 /* Card.swift */; };
+		8AD1B4501E426C4D0021EDE2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B44F1E426C4D0021EDE2 /* Extension.swift */; };
+		8AD1B4521E4272670021EDE2 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4511E4272670021EDE2 /* CardDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8AD1B4401E414CF60021EDE2 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		8AD1B44A1E4257990021EDE2 /* TheGatheringApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheGatheringApi.swift; sourceTree = "<group>"; };
 		8AD1B44C1E4257D00021EDE2 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		8AD1B44F1E426C4D0021EDE2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		8AD1B4511E4272670021EDE2 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				8AD1B4491E42573A0021EDE2 /* Model */,
 				8AD1B4421E414CFA0021EDE2 /* Cell */,
 				8AD1B43A1E4142E70021EDE2 /* Storyboard */,
+				8AD1B44E1E426C210021EDE2 /* Extension */,
 				8AD1B43B1E4142FD0021EDE2 /* Helper */,
 				8AD1B4331E41415C0021EDE2 /* Info.plist */,
 				8AD1B42B1E41415C0021EDE2 /* Magic_The_Gathering.xcdatamodeld */,
@@ -78,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				8AD1B43E1E414B680021EDE2 /* CardViewController.swift */,
+				8AD1B4511E4272670021EDE2 /* CardDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -114,6 +120,14 @@
 				8AD1B44C1E4257D00021EDE2 /* Card.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		8AD1B44E1E426C210021EDE2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1B44F1E426C4D0021EDE2 /* Extension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,8 +205,10 @@
 			files = (
 				8AD1B4411E414CF60021EDE2 /* CardCollectionViewCell.swift in Sources */,
 				8AD1B44D1E4257D00021EDE2 /* Card.swift in Sources */,
+				8AD1B4501E426C4D0021EDE2 /* Extension.swift in Sources */,
 				8AD1B4251E41415C0021EDE2 /* AppDelegate.swift in Sources */,
 				8AD1B42D1E41415C0021EDE2 /* Magic_The_Gathering.xcdatamodeld in Sources */,
+				8AD1B4521E4272670021EDE2 /* CardDetailViewController.swift in Sources */,
 				8AD1B43F1E414B680021EDE2 /* CardViewController.swift in Sources */,
 				8AD1B44B1E4257990021EDE2 /* TheGatheringApi.swift in Sources */,
 			);
