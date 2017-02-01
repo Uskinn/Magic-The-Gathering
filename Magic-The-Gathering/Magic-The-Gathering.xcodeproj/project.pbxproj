@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		8AD1B4251E41415C0021EDE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4241E41415C0021EDE2 /* AppDelegate.swift */; };
-		8AD1B4271E41415C0021EDE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4261E41415C0021EDE2 /* ViewController.swift */; };
 		8AD1B42A1E41415C0021EDE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD1B4281E41415C0021EDE2 /* Main.storyboard */; };
 		8AD1B42D1E41415C0021EDE2 /* Magic_The_Gathering.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B42B1E41415C0021EDE2 /* Magic_The_Gathering.xcdatamodeld */; };
 		8AD1B42F1E41415C0021EDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD1B42E1E41415C0021EDE2 /* Assets.xcassets */; };
 		8AD1B4321E41415C0021EDE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD1B4301E41415C0021EDE2 /* LaunchScreen.storyboard */; };
+		8AD1B43F1E414B680021EDE2 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B43E1E414B680021EDE2 /* CardViewController.swift */; };
+		8AD1B4411E414CF60021EDE2 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4401E414CF60021EDE2 /* CardCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8AD1B4211E41415C0021EDE2 /* Magic-The-Gathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic-The-Gathering.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD1B4241E41415C0021EDE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8AD1B4261E41415C0021EDE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8AD1B4291E41415C0021EDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AD1B42C1E41415C0021EDE2 /* Magic_The_Gathering.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Magic_The_Gathering.xcdatamodel; sourceTree = "<group>"; };
 		8AD1B42E1E41415C0021EDE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AD1B4311E41415C0021EDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AD1B4331E41415C0021EDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD1B43E1E414B680021EDE2 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		8AD1B4401E414CF60021EDE2 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		8AD1B4231E41415C0021EDE2 /* Magic-The-Gathering */ = {
 			isa = PBXGroup;
 			children = (
-				8AD1B4241E41415C0021EDE2 /* AppDelegate.swift */,
-				8AD1B4261E41415C0021EDE2 /* ViewController.swift */,
-				8AD1B4281E41415C0021EDE2 /* Main.storyboard */,
-				8AD1B42E1E41415C0021EDE2 /* Assets.xcassets */,
-				8AD1B4301E41415C0021EDE2 /* LaunchScreen.storyboard */,
+				8AD1B4391E4142DA0021EDE2 /* Controller */,
+				8AD1B4421E414CFA0021EDE2 /* Cell */,
+				8AD1B43A1E4142E70021EDE2 /* Storyboard */,
+				8AD1B43B1E4142FD0021EDE2 /* Helper */,
 				8AD1B4331E41415C0021EDE2 /* Info.plist */,
 				8AD1B42B1E41415C0021EDE2 /* Magic_The_Gathering.xcdatamodeld */,
+				8AD1B4241E41415C0021EDE2 /* AppDelegate.swift */,
 			);
 			path = "Magic-The-Gathering";
+			sourceTree = "<group>";
+		};
+		8AD1B4391E4142DA0021EDE2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1B43E1E414B680021EDE2 /* CardViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8AD1B43A1E4142E70021EDE2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1B4281E41415C0021EDE2 /* Main.storyboard */,
+				8AD1B4301E41415C0021EDE2 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		8AD1B43B1E4142FD0021EDE2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1B42E1E41415C0021EDE2 /* Assets.xcassets */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		8AD1B4421E414CFA0021EDE2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1B4401E414CF60021EDE2 /* CardCollectionViewCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AD1B4271E41415C0021EDE2 /* ViewController.swift in Sources */,
+				8AD1B4411E414CF60021EDE2 /* CardCollectionViewCell.swift in Sources */,
 				8AD1B4251E41415C0021EDE2 /* AppDelegate.swift in Sources */,
 				8AD1B42D1E41415C0021EDE2 /* Magic_The_Gathering.xcdatamodeld in Sources */,
+				8AD1B43F1E414B680021EDE2 /* CardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
