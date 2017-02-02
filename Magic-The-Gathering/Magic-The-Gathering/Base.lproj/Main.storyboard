@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="2412" y="-120.08995502248877"/>
         </scene>
-        <!--Detailes-->
+        <!--Details-->
         <scene sceneID="xS8-1r-bt9">
             <objects>
                 <viewController id="TGc-dN-IuA" customClass="CardDetailViewController" customModule="Magic_The_Gathering" customModuleProvider="target" sceneMemberID="viewController">
@@ -170,7 +170,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detailes" id="Ki3-dm-Ce9">
+                    <navigationItem key="navigationItem" title="Details" id="Ki3-dm-Ce9">
                         <barButtonItem key="rightBarButtonItem" image="favorite" id="kPH-k0-fvP">
                             <color key="tintColor" red="0.95047128199999997" green="0.50402210790000002" blue="0.1343598067" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>

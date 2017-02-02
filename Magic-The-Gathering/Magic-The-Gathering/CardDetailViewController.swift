@@ -8,7 +8,9 @@
 
 import UIKit
 
+
 class CardDetailViewController: UIViewController {
+    var cardModel: Card?
     
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var cardName: UILabel!
@@ -16,7 +18,6 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var cardText: UILabel!
     @IBOutlet weak var artist: UILabel!
     
-    var cardModel: Card?
     
     override func viewDidLoad() {
         super.viewDidLoad()

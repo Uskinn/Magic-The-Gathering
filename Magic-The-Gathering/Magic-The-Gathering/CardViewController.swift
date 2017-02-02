@@ -29,7 +29,7 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         }
     }
-        
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
