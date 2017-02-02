@@ -24,29 +24,12 @@ class CardDetailViewController: UIViewController {
         self.cardRarity.text = cardModel?.cardRarity
         self.artist.text = cardModel?.artist
         self.cardText.text = cardModel?.cardText
-        
-       // self.cardImage.image =
-            //cardImageView.downloadImage(from: (self.cards[indexPath.item].imageUrl)!)
-        
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func favoriteButton(_ sender: Any) {
         

@@ -29,35 +29,7 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         }
     }
-    
-//    func fetchCards() {
-//        let urlRequest = URLRequest(url: URL(string: TheGatheringApi.theGatheringUrl)!)
-//        let urlTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-//            if error != nil {
-//                print(error!)
-//                return
-//            }
-//            self.cards = [Card]()
-//            
-//            do {
-//                let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any]
-//                guard let cardFromJson = json?["cards"] as? [[String : Any]] else { return }
-//                for card in cardFromJson {
-//                    guard let cardImageUrl = card["imageUrl"] as? String else {return}
-//                    var newCard = Card()
-//                    newCard.imageUrl = cardImageUrl
-//                    self.cards?.append(newCard)
-//                }
-//                DispatchQueue.main.async {
-//                    self.myCollectionView.reloadData()
-//                }
-//            } catch let error {
-//                print(error)
-//            }
-//        }
-//        urlTask.resume()
-//    }
-    
+        
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -77,23 +49,6 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         return cell
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        self.performSegue(withIdentifier: "show", sender: self)
-//    }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toDetailVC" {
-//            if let indexPaths = self.movieCollectionView.indexPathsForSelectedItems {
-//                let indexPath = indexPaths[0]
-//                let destinationVC = segue.destination as! MovieDetailViewController
-//                destinationVC.movieModel = self.moviesArray[indexPath.row]
-//            } else {
-//                print("error occured")
-//            }
-//        }
-//    }
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "show" {
