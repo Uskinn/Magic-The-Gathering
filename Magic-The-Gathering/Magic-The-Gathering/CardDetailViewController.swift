@@ -9,6 +9,7 @@
 import UIKit
 
 class CardDetailViewController: UIViewController {
+    
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var cardName: UILabel!
     @IBOutlet weak var cardRarity: UILabel!
@@ -19,11 +20,12 @@ class CardDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.cardName.text = cardModel?.cardName
         self.cardRarity.text = cardModel?.cardRarity
         self.artist.text = cardModel?.artist
         self.cardText.text = cardModel?.cardText
+        self.cardImage.downloadImage(from: (cardModel?.imageUrl)!)
     }
 
     override func didReceiveMemoryWarning() {
