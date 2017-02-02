@@ -68,6 +68,7 @@
 			children = (
 				8AD1B4391E4142DA0021EDE2 /* Controller */,
 				8AD1B4491E42573A0021EDE2 /* Model */,
+				8AD1B4531E42CE700021EDE2 /* API */,
 				8AD1B4421E414CFA0021EDE2 /* Cell */,
 				8AD1B43A1E4142E70021EDE2 /* Storyboard */,
 				8AD1B44E1E426C210021EDE2 /* Extension */,
@@ -116,7 +117,6 @@
 		8AD1B4491E42573A0021EDE2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8AD1B44A1E4257990021EDE2 /* TheGatheringApi.swift */,
 				8AD1B44C1E4257D00021EDE2 /* Card.swift */,
 			);
 			name = Model;
@@ -128,6 +128,14 @@
 				8AD1B44F1E426C4D0021EDE2 /* Extension.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		8AD1B4531E42CE700021EDE2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1B44A1E4257990021EDE2 /* TheGatheringApi.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

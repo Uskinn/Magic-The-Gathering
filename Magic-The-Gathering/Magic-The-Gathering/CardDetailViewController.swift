@@ -12,15 +12,23 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var cardName: UILabel!
     @IBOutlet weak var cardRarity: UILabel!
-    @IBOutlet weak var cardId: UILabel!
     @IBOutlet weak var cardText: UILabel!
+    @IBOutlet weak var artist: UILabel!
     
-    @IBAction func favoriteButton(_ sender: Any) {
-    }
-
+    var cardModel: Card?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.cardName.text = cardModel?.cardName
+        self.cardRarity.text = cardModel?.cardRarity
+        self.artist.text = cardModel?.artist
+        self.cardText.text = cardModel?.cardText
+        
+       // self.cardImage.image =
+            //cardImageView.downloadImage(from: (self.cards[indexPath.item].imageUrl)!)
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -39,5 +47,8 @@ class CardDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @IBAction func favoriteButton(_ sender: Any) {
+        
+    }
 }

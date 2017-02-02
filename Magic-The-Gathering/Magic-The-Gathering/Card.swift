@@ -8,12 +8,19 @@
 
 import Foundation
 
-class Card: NSObject {
+struct Card {
     
     var cardName: String?
     var cardRarity: String?
     var cardText: String?
-    var cardId: String?
-    
+    var artist: String?
     var imageUrl: String?
+    
+    init(details: [String : Any]) {
+        self.cardName = details["name"] as? String
+        self.cardRarity = details["rarity"] as? String
+        self.cardText = details["text"] as? String
+        self.artist = details["artist"] as? String
+        self.imageUrl = details["imageUrl"] as? String
+    }
 }
