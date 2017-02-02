@@ -50,7 +50,7 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "show" {
+        if segue.identifier == "showCardDetail" {
             if let indexPaths = self.myCollectionView.indexPathsForSelectedItems {
                 let indexPath = indexPaths[0]
                 let destinationVC = segue.destination as! CardDetailViewController
