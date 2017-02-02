@@ -42,7 +42,6 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CardCollectionViewCell
         cell.cardImageView.downloadImage(from: (self.cards[indexPath.item].imageUrl)!)
         
-        
         // set round corners to cells
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 9
