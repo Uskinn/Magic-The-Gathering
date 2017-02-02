@@ -24,10 +24,16 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
                 let newCard = Card(details: card)
                 self.cards.append(newCard)
             }
-            OperationQueue.main.addOperation {
+            DispatchQueue.main.async {
                 self.myCollectionView.reloadData()
             }
+
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

@@ -7,7 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
+var favorImage = Image()
+
+var isFavorButtunChecked = false
 
 class CardDetailViewController: UIViewController {
     var cardModel: Card?
@@ -18,6 +22,7 @@ class CardDetailViewController: UIViewController {
     @IBOutlet weak var cardText: UILabel!
     @IBOutlet weak var artist: UILabel!
     
+    @IBOutlet weak var favoriteButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +39,14 @@ class CardDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func favoriteButton(_ sender: Any) {
+    @IBAction func favoriteButtonClicked(_ sender: Any) {
+        
+        if !isFavorButtunChecked {
+            favoriteButton.image = favorImage.filledFavoriteImage
+        }
+        
+        
         
     }
+    
 }

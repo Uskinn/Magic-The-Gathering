@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="CardEntity" representedClassName="CardEntity" syncable="YES" codeGenerationType="class">
+    <entity name="CardEntity" representedClassName="CardEntity" syncable="YES" codeGenerationType="category">
         <attribute name="cardArtist" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cardImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="cardName" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,6 +8,6 @@
         <attribute name="cardText" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CardEntity" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="CardEntity" positionX="-45" positionY="0" width="128" height="118"/>
     </elements>
 </model>

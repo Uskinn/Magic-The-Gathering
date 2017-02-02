@@ -7,16 +7,21 @@
 //
 
 import UIKit
+import CoreData
+
 
 class FavoriteViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var myTableView: UITableView!
-
-    let num = ["2","4","5"]
-
+    @IBOutlet weak var myTableView: UITableView!    
+    
+    var cardArray: [CardEntity] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
+    
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -26,14 +31,11 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = myTableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
-        cell.textLabel?.text = num[indexPath.row]
+        let cell = myTableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! FavoriteTableViewCell
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
-    
 }
