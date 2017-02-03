@@ -59,6 +59,7 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
                 let indexPath = indexPaths[0]
                 let destinationVC = segue.destination as! CardDetailViewController
                 destinationVC.cardModel = self.cards[indexPath.row]
+                print("cardViewController called")
             } else {
                 print("error occured")
             }

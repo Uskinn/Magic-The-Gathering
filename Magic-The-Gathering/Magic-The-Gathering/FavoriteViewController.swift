@@ -21,7 +21,6 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         let fetchResult: NSFetchRequest<CardEntity> = CardEntity.fetchRequest()
         
         do {
@@ -54,7 +53,39 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            // delete from core data
+            CoreDataFile.getContext().delete(cardArray[indexPath.row])
+            // save new changed core data
+            do {
+                try CoreDataFile.getContext().save()
+            } catch {
+                print(error)
+            }
+            // delete from array
+            cardArray.remove(at: indexPath.row)
+            // delete from tableView
+            myTableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

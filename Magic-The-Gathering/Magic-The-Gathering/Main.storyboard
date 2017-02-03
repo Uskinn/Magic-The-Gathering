@@ -180,7 +180,6 @@
                                             <outlet property="favImage" destination="lmT-mR-aWF" id="52e-Xr-Dfb"/>
                                             <outlet property="favName" destination="4F8-2Q-OuO" id="mlD-fq-ebV"/>
                                             <outlet property="favRarity" destination="lPM-5z-QOB" id="d8I-1z-1HT"/>
-                                            <segue destination="kXL-en-R4V" kind="show" identifier="showFavoriteCardDetail" id="zae-mg-qTR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -212,7 +211,6 @@
                     <view key="view" contentMode="scaleToFill" id="mvm-H7-JUH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.22038036580000001" green="0.74078786370000005" blue="0.593878448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSJ-B3-bSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
