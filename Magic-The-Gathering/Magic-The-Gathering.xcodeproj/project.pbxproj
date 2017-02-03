@@ -22,7 +22,7 @@
 		8AD1B4591E43A17D0021EDE2 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4581E43A17D0021EDE2 /* FavoriteTableViewCell.swift */; };
 		8AD1B45D1E43A6F80021EDE2 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B45C1E43A6F80021EDE2 /* Image.swift */; };
 		8AD1B4601E43B0F10021EDE2 /* CoreDataFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B45F1E43B0F10021EDE2 /* CoreDataFile.swift */; };
-		8AD1B4671E43BB750021EDE2 /* Magic-The-Gathering.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4651E43BB750021EDE2 /* Magic-The-Gathering.xcdatamodeld */; };
+		8AD1B4671E43BB750021EDE2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4651E43BB750021EDE2 /* Model.xcdatamodeld */; };
 		8AD1B46A1E43C0300021EDE2 /* CardEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4681E43C0300021EDE2 /* CardEntity+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 		8AD1B4581E43A17D0021EDE2 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		8AD1B45C1E43A6F80021EDE2 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		8AD1B45F1E43B0F10021EDE2 /* CoreDataFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataFile.swift; sourceTree = "<group>"; };
-		8AD1B4661E43BB750021EDE2 /* Magic-The-Gathering.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Magic-The-Gathering.xcdatamodel"; sourceTree = "<group>"; };
+		8AD1B4661E43BB750021EDE2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		8AD1B4681E43C0300021EDE2 /* CardEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CardEntity+CoreDataClass.swift"; path = "../CardEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,7 +167,7 @@
 			children = (
 				8AD1B45F1E43B0F10021EDE2 /* CoreDataFile.swift */,
 				8AD1B4681E43C0300021EDE2 /* CardEntity+CoreDataClass.swift */,
-				8AD1B4651E43BB750021EDE2 /* Magic-The-Gathering.xcdatamodeld */,
+				8AD1B4651E43BB750021EDE2 /* Model.xcdatamodeld */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -247,7 +247,7 @@
 			files = (
 				8AD1B4411E414CF60021EDE2 /* CardCollectionViewCell.swift in Sources */,
 				8AD1B45D1E43A6F80021EDE2 /* Image.swift in Sources */,
-				8AD1B4671E43BB750021EDE2 /* Magic-The-Gathering.xcdatamodeld in Sources */,
+				8AD1B4671E43BB750021EDE2 /* Model.xcdatamodeld in Sources */,
 				8AD1B44D1E4257D00021EDE2 /* Card.swift in Sources */,
 				8AD1B4501E426C4D0021EDE2 /* Extension.swift in Sources */,
 				8AD1B4251E41415C0021EDE2 /* AppDelegate.swift in Sources */,
@@ -426,13 +426,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8AD1B4651E43BB750021EDE2 /* Magic-The-Gathering.xcdatamodeld */ = {
+		8AD1B4651E43BB750021EDE2 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8AD1B4661E43BB750021EDE2 /* Magic-The-Gathering.xcdatamodel */,
+				8AD1B4661E43BB750021EDE2 /* Model.xcdatamodel */,
 			);
-			currentVersion = 8AD1B4661E43BB750021EDE2 /* Magic-The-Gathering.xcdatamodel */;
-			path = "Magic-The-Gathering.xcdatamodeld";
+			currentVersion = 8AD1B4661E43BB750021EDE2 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

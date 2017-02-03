@@ -10,10 +10,10 @@ import UIKit
 import CoreData
 
 var favorImage = Image()
-
 var isFavorButtunChecked = false
 
 class CardDetailViewController: UIViewController {
+    
     var cardModel: Card?
     
     @IBOutlet weak var cardImage: UIImageView!
@@ -33,20 +33,17 @@ class CardDetailViewController: UIViewController {
         self.cardText.text = cardModel?.cardText
         self.cardImage.downloadImage(from: (cardModel?.imageUrl)!)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func favoriteButtonClicked(_ sender: Any) {
-        
         if !isFavorButtunChecked {
             favoriteButton.image = favorImage.filledFavoriteImage
         }
-        
-        
-        
+        let newCard = CardEntity(context: CoreDataFile.getContext())
+        newCard.cardName = self.cardName.text
+        newCard.cardArtist = self.artist.text
+        newCard.cardRarity = self.cardRarity.text
+        newCard.cardImage = UIImagePNGRepresentation(self.cardImage.image!) as NSData?
+
+        CoreDataFile.saveContext()
     }
-    
 }

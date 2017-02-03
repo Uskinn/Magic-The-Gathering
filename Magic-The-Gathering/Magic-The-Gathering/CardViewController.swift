@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var myCollectionView: UICollectionView!
@@ -27,7 +28,6 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
             DispatchQueue.main.async {
                 self.myCollectionView.reloadData()
             }
-
         }
     }
     
@@ -47,11 +47,9 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CardCollectionViewCell
         cell.cardImageView.downloadImage(from: (self.cards[indexPath.item].imageUrl)!)
-        
         // set round corners to cells
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 9
-        
         return cell
     }
     
@@ -66,7 +64,6 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
             }
         }
     }
-
 }
 
 extension UIImageView {
