@@ -13,12 +13,12 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     var cards = [Card]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.myCollectionView.delegate = self
         self.myCollectionView.dataSource = self
-
+        
         TheGatheringApi.getCardWith { results in
             guard let searchCard = results["cards"] as? [[String : Any]] else {return}
             for card in searchCard {
@@ -33,7 +33,7 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -45,12 +45,26 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CardCollectionViewCell
-        cell.cardImageView.downloadImage(from: (self.cards[indexPath.item].imageUrl)!)
-        // set round corners to cells
-        cell.layer.masksToBounds = true
-        cell.layer.cornerRadius = 9
+        
+        if cell.delegate == nil {
+            cell.delegate = self
+            cell.layer.masksToBounds = true
+            cell.layer.cornerRadius = 9
+        }
+        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        let cardCell = cell as! CardCollectionViewCell
+        
+        let card = cards[indexPath.item]
+        
+        cardCell.card = card
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,18 +81,21 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
 }
 
-extension UIImageView {
+extension CardViewController: CardCellDelegate {
     
-    func downloadImage(from url: String) {
-        let urlRequest = URLRequest(url: URL(string: url)!)
-        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-            if error != nil {
-                print(error!)
-            }
-            DispatchQueue.main.async {
-                self.image = UIImage(data: data!)
+    func canUpdateImage(sender: Card) -> Bool {
+        
+        let visibleCells = myCollectionView.visibleCells as! [CardCollectionViewCell]
+        
+        for cell in visibleCells {
+            if cell.card == sender {
+                return true
             }
         }
-        task.resume()
+        
+        return false
     }
+    
 }
+
+

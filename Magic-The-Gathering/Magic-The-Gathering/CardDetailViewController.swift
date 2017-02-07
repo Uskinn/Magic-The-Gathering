@@ -30,12 +30,10 @@ class CardDetailViewController: UIViewController {
         self.cardRarity.text = cardModel?.cardRarity
         self.artist.text = cardModel?.artist
         self.cardText.text = cardModel?.cardText
-        self.cardImage.downloadImage(from: (cardModel?.imageUrl)!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         
         if self.cardRarity.text == "Rare" && !isFavorButtonChecked {
             print("card detail viewWllAppear called")
