@@ -49,7 +49,11 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         cell.favName.text = card.cardName
         cell.favArtist.text = card.cardArtist
         cell.favRarity.text = card.cardRarity
-        cell.favImage.image = UIImage(data: card.cardImage as! Data)
+        if let image = UIImage(data: card.cardImage as! Data) {
+            cell.favImage.image = image
+        }
+        
+        print("card image: \(card.cardImage)")
         return cell
     }
     

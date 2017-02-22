@@ -15,7 +15,6 @@
 		8AD1B4411E414CF60021EDE2 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4401E414CF60021EDE2 /* CardCollectionViewCell.swift */; };
 		8AD1B44B1E4257990021EDE2 /* TheGatheringApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B44A1E4257990021EDE2 /* TheGatheringApi.swift */; };
 		8AD1B44D1E4257D00021EDE2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B44C1E4257D00021EDE2 /* Card.swift */; };
-		8AD1B4501E426C4D0021EDE2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B44F1E426C4D0021EDE2 /* Extension.swift */; };
 		8AD1B4521E4272670021EDE2 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4511E4272670021EDE2 /* CardDetailViewController.swift */; };
 		8AD1B4551E43A11C0021EDE2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4541E43A11C0021EDE2 /* FavoriteViewController.swift */; };
 		8AD1B4571E43A13E0021EDE2 /* DetailFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1B4561E43A13E0021EDE2 /* DetailFavoriteViewController.swift */; };
@@ -37,7 +36,6 @@
 		8AD1B4401E414CF60021EDE2 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		8AD1B44A1E4257990021EDE2 /* TheGatheringApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheGatheringApi.swift; sourceTree = "<group>"; };
 		8AD1B44C1E4257D00021EDE2 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		8AD1B44F1E426C4D0021EDE2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		8AD1B4511E4272670021EDE2 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		8AD1B4541E43A11C0021EDE2 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		8AD1B4561E43A13E0021EDE2 /* DetailFavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailFavoriteViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +57,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A0A03E31E5DEBB4008746BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		8AD1B4181E41415C0021EDE2 = {
 			isa = PBXGroup;
 			children = (
@@ -78,14 +83,14 @@
 		8AD1B4231E41415C0021EDE2 /* Magic-The-Gathering */ = {
 			isa = PBXGroup;
 			children = (
+				8AD1B4491E42573A0021EDE2 /* Model */,
+				8A0A03E31E5DEBB4008746BD /* View */,
 				8AD1B4391E4142DA0021EDE2 /* Controller */,
 				8AD1B4611E43B0FC0021EDE2 /* CoreData */,
-				8AD1B4491E42573A0021EDE2 /* Model */,
 				8AD1B4531E42CE700021EDE2 /* API */,
 				8AD1B4421E414CFA0021EDE2 /* Cell */,
 				8AD1B45E1E43A7010021EDE2 /* Constant */,
 				8AD1B43A1E4142E70021EDE2 /* Storyboard */,
-				8AD1B44E1E426C210021EDE2 /* Extension */,
 				8AD1B43B1E4142FD0021EDE2 /* Helper */,
 				8AD1B4331E41415C0021EDE2 /* Info.plist */,
 				8AD1B4241E41415C0021EDE2 /* AppDelegate.swift */,
@@ -136,14 +141,6 @@
 				8AD1B44C1E4257D00021EDE2 /* Card.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		8AD1B44E1E426C210021EDE2 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				8AD1B44F1E426C4D0021EDE2 /* Extension.swift */,
-			);
-			name = Extension;
 			sourceTree = "<group>";
 		};
 		8AD1B4531E42CE700021EDE2 /* API */ = {
@@ -249,7 +246,6 @@
 				8AD1B45D1E43A6F80021EDE2 /* Image.swift in Sources */,
 				8AD1B4671E43BB750021EDE2 /* Model.xcdatamodeld in Sources */,
 				8AD1B44D1E4257D00021EDE2 /* Card.swift in Sources */,
-				8AD1B4501E426C4D0021EDE2 /* Extension.swift in Sources */,
 				8AD1B4251E41415C0021EDE2 /* AppDelegate.swift in Sources */,
 				8AD1B46A1E43C0300021EDE2 /* CardEntity+CoreDataClass.swift in Sources */,
 				8AD1B4551E43A11C0021EDE2 /* FavoriteViewController.swift in Sources */,

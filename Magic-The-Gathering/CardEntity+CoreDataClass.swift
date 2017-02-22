@@ -12,5 +12,4 @@ import CoreData
 
 @objc(CardEntity)
 public class CardEntity: NSManagedObject {
-
 }

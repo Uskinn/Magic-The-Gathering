@@ -33,7 +33,6 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -45,26 +44,19 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CardCollectionViewCell
-        
         if cell.delegate == nil {
             cell.delegate = self
             cell.layer.masksToBounds = true
             cell.layer.cornerRadius = 9
         }
-        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
         let cardCell = cell as! CardCollectionViewCell
-        
         let card = cards[indexPath.item]
-        
         cardCell.card = card
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -84,18 +76,14 @@ class CardViewController: UIViewController, UICollectionViewDataSource, UICollec
 extension CardViewController: CardCellDelegate {
     
     func canUpdateImage(sender: Card) -> Bool {
-        
         let visibleCells = myCollectionView.visibleCells as! [CardCollectionViewCell]
-        
         for cell in visibleCells {
             if cell.card == sender {
                 return true
             }
         }
-        
         return false
     }
-    
 }
 
 

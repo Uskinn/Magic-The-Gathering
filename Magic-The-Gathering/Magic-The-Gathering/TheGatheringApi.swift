@@ -10,7 +10,7 @@ import UIKit
 
 struct TheGatheringApi {
     
-   static func getCardWith(completion: @escaping ([String : Any]) -> Void) {
+    static func getCardWith(completion: @escaping ([String : Any]) -> Void) {
         let session = URLSession.shared
         let theGatheringUrl = "https://api.magicthegathering.io/v1/cards"
         let url = URL(string: theGatheringUrl)

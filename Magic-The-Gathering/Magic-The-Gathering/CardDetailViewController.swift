@@ -30,6 +30,7 @@ class CardDetailViewController: UIViewController {
         self.cardRarity.text = cardModel?.cardRarity
         self.artist.text = cardModel?.artist
         self.cardText.text = cardModel?.cardText
+        self.cardImage.image = cardModel?.image
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +47,6 @@ class CardDetailViewController: UIViewController {
             favoriteButton.image = favorImage.filledFavoriteImage
             self.saveToCoreData()
         }
-        
     }
     
     func callAlert() {
@@ -57,12 +57,10 @@ class CardDetailViewController: UIViewController {
             self.saveToCoreData()
             self.favoriteButton.image = favorImage.filledFavoriteImage
         }
-        
         let cancelAction = UIAlertAction(title: "I don't care", style: .cancel, handler: nil)
         
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
-        
         // Presenting alertController
         self.present(alertController, animated: true, completion: nil)
     }
